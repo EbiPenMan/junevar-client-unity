@@ -1,0 +1,22 @@
+{
+    "name": "ProGraphGroup.Games.Junevar",
+    "rootNamespace": "ProGraphGroup.Games.Junevar",
+    "references": [
+        "GUID:be215032ec119c04a9bf34eb1972e60d",
+        "GUID:977ad5fa951173a40850b908452d87a0",
+        "GUID:0124968563b412f48b86c30f3a12a14c",
+        "GUID:f51ebe6a0ceec4240a699833d6309b23",
+        "GUID:1fbc052e3ea2ff24b8874f1cedb59b6c",
+        "GUID:dc47925d1a5fa2946bdd37746b2b5d48",
+        "GUID:560b04d1a97f54a4e82edc0cbbb69285"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

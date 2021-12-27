@@ -1,0 +1,22 @@
+{
+    "name": "ProGraphGroup.General",
+    "rootNamespace": "ProGraphGroup.General",
+    "references": [
+        "UniTask",
+        "Winigames.packages.GeneralManagers",
+        "Winigames.Packages.Utility",
+        "DOTween.Modules",
+        "DOTweenPro.Scripts",
+        "UniTask.DOTween",
+        "DOTweenPro.EditorScripts"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
