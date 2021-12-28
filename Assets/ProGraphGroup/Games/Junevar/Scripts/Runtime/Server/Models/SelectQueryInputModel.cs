@@ -27,7 +27,21 @@ public class SelectQueryInputModel {
     
     [JsonProperty("offset")]
     public int Offset;
-    
+
+    public SelectQueryInputModel()
+    {
+    }
+
+    public SelectQueryInputModel(string tableName, List<string> selectColumnNames, AsOfSystemModel asOfSystemModel, List<DbWhereModel> whereModels, List<DbSortModel> sort, int limit, int offset)
+    {
+        TableName = tableName;
+        SelectColumnNames = selectColumnNames;
+        AsOfSystemModel = asOfSystemModel;
+        WhereModels = whereModels;
+        Sort = sort;
+        Limit = limit;
+        Offset = offset;
+    }
 }
     
 public class DbWhereModel {
@@ -37,7 +51,16 @@ public class DbWhereModel {
     
     [JsonProperty("operator")]
     public OperatorType Operator;
-    
+
+    public DbWhereModel()
+    {
+    }
+
+    public DbWhereModel(List<DbWhereFieldModel> whereFields, OperatorType @operator)
+    {
+        WhereFields = whereFields;
+        Operator = @operator;
+    }
 }
     
 public class DbWhereFieldModel {
@@ -50,7 +73,17 @@ public class DbWhereFieldModel {
     
     [JsonProperty("operator")]
     public OperatorType Operator;
-    
+
+    public DbWhereFieldModel()
+    {
+    }
+
+    public DbWhereFieldModel(string fieldName, object fieldValue, OperatorType @operator)
+    {
+        FieldName = fieldName;
+        FieldValue = fieldValue;
+        Operator = @operator;
+    }
 }
     
 public class DbSortModel {
@@ -60,7 +93,16 @@ public class DbSortModel {
     
     [JsonProperty("sortType")]
     public SortType SortType;
-    
+
+    public DbSortModel()
+    {
+    }
+
+    public DbSortModel(string fieldName, SortType sortType)
+    {
+        FieldName = fieldName;
+        SortType = sortType;
+    }
 }
     
 public class KeyValueModel {
@@ -70,7 +112,16 @@ public class KeyValueModel {
     
     [JsonProperty("value")]
     public object Value;
-    
+
+    public KeyValueModel()
+    {
+    }
+
+    public KeyValueModel(string key, object value)
+    {
+        Key = key;
+        Value = value;
+    }
 }
     
 public class DbPageableModel {
@@ -80,7 +131,16 @@ public class DbPageableModel {
     
     [JsonProperty("pageSize")]
     public object PageSize;
-    
+
+    public DbPageableModel()
+    {
+    }
+
+    public DbPageableModel(int pageNumber, object pageSize)
+    {
+        PageNumber = pageNumber;
+        PageSize = pageSize;
+    }
 }
     
 public class SelectQueryOutputModel {
@@ -93,7 +153,17 @@ public class SelectQueryOutputModel {
     
     [JsonProperty("rows")]
     public List<object> Rows;
-    
+
+    public SelectQueryOutputModel()
+    {
+    }
+
+    public SelectQueryOutputModel(int pageNumber, int totalPageSize, List<object> rows)
+    {
+        PageNumber = pageNumber;
+        TotalPageSize = totalPageSize;
+        Rows = rows;
+    }
 }
     
 public class AsOfSystemModel {
@@ -103,7 +173,16 @@ public class AsOfSystemModel {
     
     [JsonProperty("value")]
     public string Value;
-    
+
+    public AsOfSystemModel()
+    {
+    }
+
+    public AsOfSystemModel(AsOfSystemType type, string value)
+    {
+        Type = type;
+        Value = value;
+    }
 }
     
 public enum OperatorType {

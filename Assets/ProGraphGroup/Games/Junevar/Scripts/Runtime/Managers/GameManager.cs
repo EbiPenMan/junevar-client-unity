@@ -20,9 +20,10 @@ namespace ProGraphGroup.Games.Junevar.Managers
         {
             await ServerManager.Instance.Init();
             var aa = await ProfileManager.Instance.GetMyAccountAsync();
-            _logger.Info("User Id: " , aa.User.Id);            
-            _logger.Info("Username: " , aa.User.Username);            
-            var bb = await AxieManager.Instance.GetMyAxieAsync();
+            _logger.Info("User Id: ", aa.User.Id);
+            _logger.Info("Username: ", aa.User.Username);
+            // var bb = await AxieManager.Instance.GetMyAxieAsync();
+            ShopManager.Instance.GetShop(0);
         }
     }
 }

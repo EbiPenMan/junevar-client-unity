@@ -122,6 +122,19 @@ namespace ProGraphGroup.Games.Junevar.Server
             return JsonConvert.DeserializeObject<BaseResponseVerifyModel>(response.Payload);
         }
 
+        public async UniTask<GetShopResponse> GetShopItems(SelectQueryInputModel selectQueryInputModel)
+        {
+            var response =
+                await client.RpcAsync(session, "rpcGetShop", JsonConvert.SerializeObject(selectQueryInputModel));
+            return JsonConvert.DeserializeObject<GetShopResponse>(response.Payload);
+        }
+        public async UniTask<GetShopResponse> GetMyAxie()
+        {
+            var response =
+                await client.RpcAsync(session, "rpcGetMyAxies", "");
+            return JsonConvert.DeserializeObject<GetShopResponse>(response.Payload);
+        }
+
 
         private async UniTask<T> getServerCollection<T>(string collection, string key, string userId = null,
             string version = null) where T : class
